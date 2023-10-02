@@ -23,7 +23,7 @@ function App() {
       <CssBaseline />  
       <Router>
         <div className="App">
-          <Sidebar />
+        
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/profile" element={<Profile />} />

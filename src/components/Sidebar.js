@@ -6,9 +6,10 @@ import {
   ListItem,
   ListItemText,
   ListItemIcon,
+  Avatar
 } from "@mui/material";
 import HomeIcon from "@mui/icons-material/Home";
-import PersonIcon from "@mui/icons-material/Person";
+ 
 import ChatIcon from "@mui/icons-material/Chat";
 import ExploreIcon from "@mui/icons-material/Explore";
 import SearchIcon from "@mui/icons-material/Search";
@@ -32,7 +33,7 @@ function Sidebar() {
 
   return (
     <Drawer variant="permanent" sx={{ backgroundColor: "black" }}>
-      <List>
+      <List  style={{  borderRight: '2px solid grey', width: '250px' }}>  
         <ListItem component={Link} to="/" sx={listItemStyle}>
           <InstagramLogo />
         </ListItem>
@@ -88,12 +89,12 @@ function Sidebar() {
 
         <ListItem component={Link} to="/profile" sx={listItemStyle}>
           <ListItemIcon>
-            <PersonIcon sx={iconStyle} />
+          <Avatar src={require('../assets/moath.jpeg')}/>
           </ListItemIcon>
-          <ListItemText primary="Profile" />
+          <ListItemText primary="moath_abdalrazeq" />
         </ListItem>
         
-        <ListItem component={Link} to="/profile" sx={listItemStyle}>
+        <ListItem component={Link} to="/profile" sx={listItemStyle} style={{marginTop:"85px"}}>
           <ListItemIcon>
             <MenuIcon sx={iconStyle} />
           </ListItemIcon>

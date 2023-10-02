@@ -1,50 +1,79 @@
 import React from 'react';
-import { Avatar, Card, CardHeader, CardContent, CardActions, IconButton, Typography } from '@mui/material';
+import { Avatar, Card, CardHeader, CardContent, CardActions, IconButton, Typography, Divider } from '@mui/material';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import ChatBubbleOutlineIcon from '@mui/icons-material/ChatBubbleOutline';
 import SendIcon from '@mui/icons-material/Send';
 import BookmarkBorderIcon from '@mui/icons-material/BookmarkBorder';
+import MoreHorizIcon from '@mui/icons-material/MoreHoriz';
+
+const cardStyle = {
+  backgroundColor: 'black',
+  color: 'white',
+  marginBottom: '20px',
+  width: '50%',
+  marginLeft:"350px"
+};
 
 const Post = ({ post }) => {
+ 
   return (
-    <Card sx={{ backgroundColor: 'black', color: 'white', marginBottom: '20px', marginLeft:"200px" }}>
+    <Card sx={cardStyle} className="custom-card">
       {/* Post Header */}
       <CardHeader
         avatar={<Avatar src={post.avatar} alt={post.username} />}
-        title={post.username}
+        action={<IconButton aria-label="Options"><MoreHorizIcon style={{ color: "white" }} /></IconButton>}
+        title={
+          <div style={{ display: 'flex' }}>
+            <Typography variant="body1" component="div" color="inherit" style={{ marginRight: "8px" }}>
+              {post.username}
+            </Typography>
+
+            <Typography variant="caption" component="div" style={{ color: 'Grey', marginTop: "4px" }}>
+              ٫ {post.timeAgo}
+            </Typography>
+          </div>
+        }
       />
 
       {/* Post Image */}
-      <img src={post.image} alt="Post" style={{  }} />
+      <img src={post.image} alt="Post" style={{ width: '100%', height: 'auto' }} />
 
       {/* Post Actions */}
-      <CardActions disableSpacing  >
-        <IconButton aria-label="Like" color="inherit">
-          <FavoriteIcon />
-        </IconButton>
-        <IconButton aria-label="Comment" color="inherit">
-          <ChatBubbleOutlineIcon />
-        </IconButton>
-        <IconButton aria-label="Send" color="inherit">
-          <SendIcon />
-        </IconButton>
-        <IconButton aria-label="Save" color="inherit">
-          <BookmarkBorderIcon />
-        </IconButton>
+      <CardActions disableSpacing>
+        <div >
+          <IconButton aria-label="Like" color="inherit">
+            <FavoriteIcon />
+          </IconButton>
+          <IconButton aria-label="Comment" color="inherit">
+            <ChatBubbleOutlineIcon />
+          </IconButton>
+          <IconButton aria-label="Send" color="inherit">
+            <SendIcon />
+          </IconButton>
+        </div>
+        <div style={{ marginLeft: "auto" }}>
+          <IconButton aria-label="Save" color="inherit"  >
+            <BookmarkBorderIcon />
+          </IconButton>
+        </div>
       </CardActions>
 
-      {/* Likes */}
-      <CardContent style={{marginTop:"-20px"}}>
-        <Typography variant="subtitle1" component="div" color="inherit">
+      {/* Likes and Comments */}
+      <CardContent style={{ marginTop: "-20px" }}>
+        <Typography variant="subtitle1" component="div" color="inherit" >
           {post.likes} likes
         </Typography>
-      </CardContent>
-
-      {/* Post Caption */}
-      <CardContent>
-        <Typography variant="body2" color="inherit" component="div" style={{marginTop:"-20px"}} >
+        <Typography variant="body2" color="inherit" component="div">
           <strong>{post.username}</strong> {post.caption}
         </Typography>
+        <Divider sx={{ margin: '10px 0' }} />
+
+        {/* View all comments */}
+        {post.comments.length > 1 && (
+          <Typography variant="caption" color="inherit" component="div" style={{ marginTop: "-10px" }}>
+            View all {post.comments.length} comments
+          </Typography>
+        )}
       </CardContent>
     </Card>
   );
