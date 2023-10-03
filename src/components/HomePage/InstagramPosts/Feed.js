@@ -5,8 +5,8 @@ const posts = [
   {
     id: 1,
     username: 'user1',
-    avatar: require('../../assets/StoriesAvatars/farmer-avatar.png'),
-    image: require('../../assets/ExplorePics/explorePic13.webp'),
+    avatar: require('../../../assets/StoriesAvatars/farmer-avatar.png'),
+    image: require('../../../assets/ExplorePics/explorePic13.webp'),
     likes: 100,
     caption: 'A beautiful day!',
     timeAgo: '2h',  
@@ -18,8 +18,8 @@ const posts = [
   {
     id: 2,
     username: 'user2',
-    avatar: require('../../assets/StoriesAvatars/farmer-avatar.png'),
-    image: require('../../assets/ExplorePics/explorePic10.webp'),
+    avatar: require('../../../assets/StoriesAvatars/farmer-avatar.png'),
+    image: require('../../../assets/ExplorePics/explorePic10.webp'),
     likes: 200,
     caption: 'Exploring new places!',
     timeAgo: '3h',  

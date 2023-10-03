@@ -1,16 +1,14 @@
 import React from 'react';
-import Carousel from './InstagramStories/Carousel';  
-import Feed from './InstagramPosts/Feed'; 
-import Sidebar from './Sidebar';
-import FriendSuggestions from './UsersSuggestion/FriendSuggestions';
+import Carousel from './HomePage/InstagramStories/Carousel';  
+import Feed from './HomePage/InstagramPosts/Feed'; 
+ 
+import FriendSuggestions from './HomePage/UsersSuggestion/FriendSuggestions';
  
 
 function Home() {
   return (
     <div>
-      <div>
-        <Sidebar />
-      </div>
+ 
       <div style={{display:"flex"}}  > 
       <div>
         <Carousel />
