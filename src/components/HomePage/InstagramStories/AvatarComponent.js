@@ -2,7 +2,7 @@ import React from 'react';
 import Paper from '@mui/material/Paper';
 import Typography from '@mui/material/Typography';
 
-const Avatar = ({ image }) => {
+const AvatarComponent = ({ image }) => {
   return (
     <section style={{ marginLeft: "20px", textAlign: "center" }}>
       <Paper
@@ -49,4 +49,4 @@ const Avatar = ({ image }) => {
   );
 };
 
-export default Avatar;
+export default AvatarComponent;

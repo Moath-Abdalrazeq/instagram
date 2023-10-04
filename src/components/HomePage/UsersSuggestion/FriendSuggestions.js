@@ -1,13 +1,11 @@
 import React from "react";
 import { Card, CardContent, Avatar, Typography, Button } from "@mui/material";
-import { friendSuggestions , footer } from "./SuggestionsData";
+import { friendSuggestions, footer } from "./SuggestionsData";
 const FriendSuggestions = () => {
   return (
     <Card
       sx={{
-        backgroundColor: "black",
         color: "white",
-        textAlign: "left",
         marginTop: "20px",
       }}
     >
@@ -81,13 +79,18 @@ const FriendSuggestions = () => {
               border: "none",
               color: "gray",
               cursor: "pointer",
-              fontSize:"12px"
+              fontSize: "12px",
             }}
           >
-            {footers.name}  
+            {footers.name}
           </button>
         ))}
-        <Typography variant="body2" style={{ color: "gray" , marginTop:"20px" }}  >© 2023 INSTAGRAM FROM META</Typography>
+        <Typography
+          variant="body2"
+          style={{ color: "gray", marginTop: "20px" }}
+        >
+          © 2023 INSTAGRAM FROM META
+        </Typography>
       </CardContent>
     </Card>
   );
