@@ -1,11 +1,33 @@
 import React from "react";
-import { Container, Grid, Avatar, Typography, Button, Divider } from "@mui/material";
+import {
+  Container,
+  Grid,
+  Avatar,
+  Typography,
+  Button,
+  Divider,
+  styled,
+  Card,
+  CardMedia,
+  CardActionArea,
+  CardContent,
+} from "@mui/material";
+import SettingsIcon from "@mui/icons-material/Settings";
 
 const Profile = () => {
+  const images = [
+    { id: 1, img: require("../../assets/moath.jpeg") },
+    { id: 2, img: require("../../assets/moath.jpeg") },
+    { id: 3, img: require("../../assets/moath.jpeg") },
+    { id: 4, img: require("../../assets/moath.jpeg") },
+    { id: 5, img: require("../../assets/moath.jpeg") },
+    { id: 6, img: require("../../assets/moath.jpeg") },
+  ];
   const buttonStyle = {
     background: "white",
     color: "black",
-    borderRadius: "20px",
+    borderRadius: "30px",
+    marginRight: "10px",
   };
 
   return (
@@ -22,15 +44,15 @@ const Profile = () => {
               <Typography style={{ marginRight: "30px" }} variant="h4">
                 moath_abdalrazeq
               </Typography>
-              <Button
-                style={{ ...buttonStyle, marginRight: "10px" }}
-                variant="contained"
-              >
+              <Button style={buttonStyle} variant="contained">
                 Edit Profile
               </Button>
               <Button style={buttonStyle} variant="contained">
                 Message
               </Button>
+              <div style={{ marginTop: "12px", cursor: "pointer" }}>
+                <SettingsIcon />
+              </div>
             </div>
           </div>
           <div style={{ marginTop: "20px" }}>
@@ -46,11 +68,32 @@ const Profile = () => {
                 Computer Engineering 💻❤
               </Typography>
             </div>
-        
           </div>
-          <Divider component="div" sx={{ my: 2 , backgroundColor:"gray" }} /> 
+          <Divider component="div" sx={{ my: 2, backgroundColor: "gray" }} />
+          <div
+            style={{
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "space-evenly",
+            }}
+          >
+            <Button variant="subtitle1">Posts</Button>
+            <Button variant="subtitle1"> Reels</Button>
+            <Button variant="subtitle1"> Tagged</Button>
+          </div>
+
+          <Grid container spacing={2}>
+            {images.map((image) => (
+              <Grid item xs={12} sm={4} key={image.id}>
+                <Card sx={{ maxWidth: 400 }}>
+                  <CardActionArea>
+                    <CardMedia component="img" image={image.img} alt="Image" />
+                  </CardActionArea>
+                </Card>
+              </Grid>
+            ))}
+          </Grid>
         </Grid>
-       
       </Grid>
     </Container>
   );
