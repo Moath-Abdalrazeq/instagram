@@ -12,7 +12,7 @@ import {
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import { MessageIcon, NewMessageIcon } from "./MessageIcon";
 import { friends } from "./MessageData";
-const Messages = () => {
+function Messages() {
   return (
     <div style={{ display: "flex" }}>
       <div style={{ width: "200px" }}></div>
@@ -103,6 +103,6 @@ const Messages = () => {
       </div>
     </div>
   );
-};
+}
 
 export default Messages;

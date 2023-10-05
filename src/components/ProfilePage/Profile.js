@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   Container,
   Grid,
@@ -6,22 +6,21 @@ import {
   Typography,
   Button,
   Divider,
-  styled,
   Card,
   CardMedia,
   CardActionArea,
-  CardContent,
 } from "@mui/material";
 import SettingsIcon from "@mui/icons-material/Settings";
 
-const Profile = () => {
+function Profile() {
+  const [selectedTab, setSelectedTab] = useState("Posts");
   const images = [
-    { id: 1, img: require("../../assets/moath.jpeg") },
-    { id: 2, img: require("../../assets/moath.jpeg") },
-    { id: 3, img: require("../../assets/moath.jpeg") },
-    { id: 4, img: require("../../assets/moath.jpeg") },
-    { id: 5, img: require("../../assets/moath.jpeg") },
-    { id: 6, img: require("../../assets/moath.jpeg") },
+    { id: 1, img:require("../../assets/ExplorePics/explorePic10.webp")},
+    { id: 2, img:require("../../assets/ExplorePics/explorePic11.webp") },
+    { id: 3, img:require("../../assets/ExplorePics/explorePic12.webp") },
+    { id: 4, img:require("../../assets/ExplorePics/explorePic13.webp") },
+    { id: 5, img:require("../../assets/ExplorePics/explorePic14.webp") },
+    { id: 6, img:require("../../assets/ExplorePics/explorePic4.avif") },
   ];
   const buttonStyle = {
     background: "white",
@@ -29,11 +28,10 @@ const Profile = () => {
     borderRadius: "30px",
     marginRight: "10px",
   };
-
   return (
-    <Container style={{ marginTop: "80px", color: "white" }}>
+    <Container style={{ marginTop: "40px", color: "white" }}>
       <Grid container spacing={2}>
-        <Grid item xs={12} sm={2.5}></Grid>
+        <Grid item xs={12} sm={3}></Grid>
         <Grid item xs={12} sm={9}>
           <div style={{ display: "flex", alignItems: "center" }}>
             <Avatar
@@ -77,26 +75,59 @@ const Profile = () => {
               justifyContent: "space-evenly",
             }}
           >
-            <Button variant="subtitle1">Posts</Button>
-            <Button variant="subtitle1"> Reels</Button>
-            <Button variant="subtitle1"> Tagged</Button>
+            <Button
+              variant="subtitle1"
+              onClick={() => setSelectedTab("Posts")}
+              sx={{
+                fontWeight: selectedTab === "Posts" ? "bold" : "normal",
+                borderTop: selectedTab === "Posts" ? "2px solid white" : "none",
+              }}
+            >
+              Posts
+            </Button>
+            <Button
+              variant="subtitle1"
+              onClick={() => setSelectedTab("Reels")}
+              sx={{
+                fontWeight: selectedTab === "Reels" ? "bold" : "normal",
+                borderTop: selectedTab === "Reels" ? "2px solid white" : "none",
+              }}
+            >
+              Reels
+            </Button>
+            <Button
+              variant="subtitle1"
+              onClick={() => setSelectedTab("Tagged")}
+              sx={{
+                fontWeight: selectedTab === "Tagged" ? "bold" : "normal",
+                borderTop:
+                  selectedTab === "Tagged" ? "2px solid white" : "none",
+              }}
+            >
+              Tagged
+            </Button>
           </div>
-
-          <Grid container spacing={2}>
-            {images.map((image) => (
-              <Grid item xs={12} sm={4} key={image.id}>
-                <Card sx={{ maxWidth: 400 }}>
-                  <CardActionArea>
-                    <CardMedia component="img" image={image.img} alt="Image" />
-                  </CardActionArea>
-                </Card>
-              </Grid>
-            ))}
-          </Grid>
+          {selectedTab === "Posts" && (
+            <Grid container spacing={2}>
+              {images.map((image) => (
+                <Grid item xs={12} sm={4} key={image.id}>
+                  <Card sx={{ maxWidth: 400 }}>
+                    <CardActionArea>
+                      <CardMedia
+                        component="img"
+                        image={image.img}
+                        alt="Image"
+                      />
+                    </CardActionArea>
+                  </Card>
+                </Grid>
+              ))}
+            </Grid>
+          )}
         </Grid>
       </Grid>
     </Container>
   );
-};
+}
 
 export default Profile;

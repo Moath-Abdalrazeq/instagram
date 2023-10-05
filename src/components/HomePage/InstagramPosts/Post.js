@@ -21,7 +21,7 @@ const cardStyle = {
   marginLeft: "350px",
 };
 
-const Post = ({ post }) => {
+function Post({ post }) {
   return (
     <Card sx={cardStyle} className="custom-card">
       <CardHeader
@@ -41,7 +41,6 @@ const Post = ({ post }) => {
             >
               {post.username}
             </Typography>
-
             <Typography
               variant="caption"
               component="div"
@@ -52,13 +51,11 @@ const Post = ({ post }) => {
           </div>
         }
       />
-
       <img
         src={post.image}
         alt="Post"
         style={{ width: "100%", height: "auto" }}
       />
-
       <CardActions disableSpacing>
         <div>
           <IconButton aria-label="Like" color="inherit">
@@ -77,7 +74,6 @@ const Post = ({ post }) => {
           </IconButton>
         </div>
       </CardActions>
-
       <CardContent style={{ marginTop: "-20px" }}>
         <Typography variant="subtitle1" component="div" color="inherit">
           {post.likes} likes
@@ -86,7 +82,6 @@ const Post = ({ post }) => {
           <strong>{post.username}</strong> {post.caption}
         </Typography>
         <Divider sx={{ margin: "10px 0" }} />
-
         {post.comments.length > 1 && (
           <Typography
             variant="caption"
@@ -100,6 +95,6 @@ const Post = ({ post }) => {
       </CardContent>
     </Card>
   );
-};
+}
 
 export default Post;

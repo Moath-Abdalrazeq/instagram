@@ -1,7 +1,7 @@
 import React from "react";
 import { Card, CardContent, Avatar, Typography, Button } from "@mui/material";
 import { friendSuggestions, footer } from "./SuggestionsData";
-const FriendSuggestions = () => {
+function FriendSuggestions() {
   return (
     <Card
       sx={{
@@ -94,6 +94,6 @@ const FriendSuggestions = () => {
       </CardContent>
     </Card>
   );
-};
+}
 
 export default FriendSuggestions;

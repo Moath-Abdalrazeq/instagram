@@ -1,4 +1,3 @@
-import React from "react";
 import { Link } from "react-router-dom";
 import {
   Drawer,
@@ -9,6 +8,7 @@ import {
   Avatar,
   Divider,
 } from "@mui/material";
+import { useState, React } from "react";
 import HomeIcon from "@mui/icons-material/Home";
 import ChatIcon from "@mui/icons-material/Chat";
 import ExploreIcon from "@mui/icons-material/Explore";
@@ -18,8 +18,18 @@ import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import AddCircleOutlineIcon from "@mui/icons-material/AddCircleOutline";
 import MenuIcon from "@mui/icons-material/Menu";
 import InstagramLogo from "../assets/InstagramLogo";
+import CreatePostModal from "./CreatePostModal";
 
 function Sidebar() {
+  const [isCreatePostModalOpen, setIsCreatePostModalOpen] = useState(false);
+
+  const handleCreatePostClick = () => {
+    setIsCreatePostModalOpen(true);
+  };
+
+  const closeCreatePostModal = () => {
+    setIsCreatePostModalOpen(false);
+  };
   const listItemStyle = {
     color: "#FFFFFF",
     "&:hover": {
@@ -35,12 +45,12 @@ function Sidebar() {
     <Drawer variant="permanent" sx={{ backgroundColor: "black" }}>
       <List
         style={{
-          borderRight: '2px solid grey',
-          width: '250px',
-          display: 'flex',
-          flexDirection: 'column',
-          justifyContent: 'space-between',  
-          height: '100%',
+          borderRight: "2px solid grey",
+          width: "250px",
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "space-between",
+          height: "100%",
         }}
       >
         <div>
@@ -89,8 +99,12 @@ function Sidebar() {
             </ListItemIcon>
             <ListItemText primary="Notifications" />
           </ListItem>
-
-          <ListItem component={Link} to="/create" sx={listItemStyle}>
+          <ListItem
+            component="div"
+            onClick={handleCreatePostClick}
+            sx={listItemStyle}
+            style={{ cursor: "pointer" }}
+          >
             <ListItemIcon>
               <AddCircleOutlineIcon sx={iconStyle} />
             </ListItemIcon>
@@ -98,7 +112,7 @@ function Sidebar() {
           </ListItem>
           <ListItem component={Link} to="/profile" sx={listItemStyle}>
             <ListItemIcon>
-              <Avatar src={require('../assets/moath.jpeg')}/>
+              <Avatar src={require("../assets/moath.jpeg")} />
             </ListItemIcon>
             <ListItemText primary="moath_abdalrazeq" />
           </ListItem>
@@ -113,6 +127,10 @@ function Sidebar() {
           </ListItem>
         </div>
       </List>
+      <CreatePostModal
+        open={isCreatePostModalOpen}
+        onClose={closeCreatePostModal}
+      />
     </Drawer>
   );
 }
