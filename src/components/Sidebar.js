@@ -65,7 +65,7 @@ function Sidebar() {
             <ListItemText primary="Home" />
           </ListItem>
 
-          <ListItem component={Link} to="/search" sx={listItemStyle}>
+          <ListItem component={Link} to="/blank" sx={listItemStyle}>
             <ListItemIcon>
               <SearchIcon sx={iconStyle} />
             </ListItemIcon>
@@ -79,7 +79,7 @@ function Sidebar() {
             <ListItemText primary="Explore" />
           </ListItem>
 
-          <ListItem component={Link} to="/reels" sx={listItemStyle}>
+          <ListItem component={Link} to="/blank" sx={listItemStyle}>
             <ListItemIcon>
               <SlideshowIcon sx={iconStyle} />
             </ListItemIcon>
@@ -93,7 +93,7 @@ function Sidebar() {
             <ListItemText primary="Messages" />
           </ListItem>
 
-          <ListItem component={Link} to="/notifications" sx={listItemStyle}>
+          <ListItem component={Link} to="/blank" sx={listItemStyle}>
             <ListItemIcon>
               <FavoriteBorderIcon sx={iconStyle} />
             </ListItemIcon>
@@ -119,7 +119,7 @@ function Sidebar() {
         </div>
 
         <div>
-          <ListItem component={Link} to="/profile" sx={listItemStyle}>
+          <ListItem component={Link} to="/blank" sx={listItemStyle}>
             <ListItemIcon>
               <MenuIcon sx={iconStyle} />
             </ListItemIcon>

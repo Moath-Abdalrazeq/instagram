@@ -1,13 +1,14 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Sidebar from "./components/Sidebar";
-import Home from "./components/Home";
+import Home from "./components/HomePage/Home";
 import Profile from "./components/ProfilePage/Profile";
 import Messages from "./components/MassagesPage/Messages";
 import Explore from "./components/ExplorePage/Explore";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
 import Grid from "@mui/material/Grid";
+import BlankPages from "./components/BlankPages";
 
 
 const blackTheme = createTheme({
@@ -34,6 +35,7 @@ function App() {
               <Route path="/profile" element={<Profile />} />
               <Route path="/messages" element={<Messages />} />
               <Route path="/explore" element={<Explore />} />
+              <Route path="/blank" element={<BlankPages/>} />
             </Routes>
           </Grid>
         </Grid>

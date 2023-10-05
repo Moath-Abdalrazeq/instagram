@@ -1,8 +1,8 @@
 import React from 'react';
-import Carousel from './HomePage/InstagramStories/Carousel';  
-import Feed from './HomePage/InstagramPosts/Feed'; 
+import Carousel from './InstagramStories/Carousel';  
+import Feed from './InstagramPosts/Feed'; 
  
-import FriendSuggestions from './HomePage/UsersSuggestion/FriendSuggestions';
+import FriendSuggestions from './UsersSuggestion/FriendSuggestions';
  
 
 function Home() {
