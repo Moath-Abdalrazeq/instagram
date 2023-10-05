@@ -1,4 +1,4 @@
-export const statusCarousel = [
+export const statusCircular = [
     {
         id:1,
         img:require('../src/assets/StoriesAvatars/driver.png'),

@@ -1,9 +1,10 @@
 import React from "react";
 import Paper from "@mui/material/Paper";
 import Typography from "@mui/material/Typography";
-
+ 
 function AvatarComponent({ image }) {
   return (
+ 
     <section style={{ marginLeft: "20px", textAlign: "center" }}>
       <Paper
         style={{
@@ -45,6 +46,7 @@ function AvatarComponent({ image }) {
         {image.name}
       </Typography>
     </section>
+   
   );
 }
 

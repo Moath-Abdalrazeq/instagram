@@ -8,6 +8,7 @@ import {
   IconButton,
   Typography,
   Divider,
+  Grid
 } from "@mui/material";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 import ChatBubbleOutlineIcon from "@mui/icons-material/ChatBubbleOutline";
@@ -18,11 +19,14 @@ import MoreHorizIcon from "@mui/icons-material/MoreHoriz";
 const cardStyle = {
   color: "white",
   width: "50%",
-  marginLeft: "350px",
+ 
 };
 
 function Post({ post }) {
   return (
+    <Grid container>
+    <Grid item xs={12} sm={5}> </Grid>
+ 
     <Card sx={cardStyle} className="custom-card">
       <CardHeader
         avatar={<Avatar src={post.avatar} alt={post.username} />}
@@ -94,6 +98,8 @@ function Post({ post }) {
         )}
       </CardContent>
     </Card>
+ 
+    </Grid>
   );
 }
 
