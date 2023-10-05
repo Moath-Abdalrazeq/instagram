@@ -4,7 +4,7 @@ import Post from "./Post";
 const posts = [
   {
     id: 1,
-    username: "user1",
+    username: "Ahmad",
     avatar: require("../../../assets/StoriesAvatars/farmer-avatar.png"),
     image: require("../../../assets/ExplorePics/explorePic13.webp"),
     likes: 100,
@@ -14,8 +14,8 @@ const posts = [
   },
   {
     id: 2,
-    username: "user2",
-    avatar: require("../../../assets/StoriesAvatars/farmer-avatar.png"),
+    username: "Ward",
+    avatar: require("../../../assets/StoriesAvatars/driver.png"),
     image: require("../../../assets/ExplorePics/explorePic10.webp"),
     likes: 200,
     caption: "Exploring new places!",

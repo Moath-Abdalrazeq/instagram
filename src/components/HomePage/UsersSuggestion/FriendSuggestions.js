@@ -19,7 +19,7 @@ function FriendSuggestions() {
         >
           <Avatar
             src={require("../../../assets/moath.jpeg")}
-            alt="Your Name"
+            alt="moath"
             style={{ marginRight: "10px" }}
           />
           <div>

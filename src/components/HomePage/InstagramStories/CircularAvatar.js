@@ -3,7 +3,7 @@ import React from "react";
 import { statusCarousel } from "../../../data";
 import AvatarComponent from "./AvatarComponent";
 
-function Carousel() {
+function CircularAvatar() {
   return (
     <section style={{ display: "flex" }}>
       <div style={{ display: "flex", marginLeft: "250px", marginTop: "20px" }}>
@@ -15,4 +15,4 @@ function Carousel() {
   );
 }
 
-export default Carousel;
+export default CircularAvatar;

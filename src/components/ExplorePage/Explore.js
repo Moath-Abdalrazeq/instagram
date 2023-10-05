@@ -1,13 +1,12 @@
-import React from 'react';
-import { Container, Grid, Card, CardMedia, styled } from '@mui/material';
-
-import { mockPosts } from './ExploreData';
+import React from "react";
+import { Container, Grid, Card, CardMedia, styled } from "@mui/material";
+import { mockPosts } from "./ExploreData";
 
 const StyledCardMedia = styled(CardMedia)({
-  transition: 'transform 0.2s, box-shadow 0.2s',
-  '&:hover': {
-    transform: 'scale(1.05)',  
-    cursor: 'pointer', 
+  transition: "transform 0.2s, box-shadow 0.2s",
+  "&:hover": {
+    transform: "scale(1.05)",
+    cursor: "pointer",
   },
 });
 
@@ -27,9 +26,8 @@ const ExplorePage = () => {
                       height="300"
                       image={post.image}
                       alt={post.caption}
-                      style={{ marginTop: '16px' }}
+                      style={{ marginTop: "16px" }}
                     />
-                    
                   </Card>
                 </Grid>
               ))}
