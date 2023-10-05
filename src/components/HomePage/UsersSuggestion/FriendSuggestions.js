@@ -38,7 +38,7 @@ function FriendSuggestions() {
         </div>
         <div style={{ display: "flex", justifyContent: "space-between" }}>
           <Typography variant="body1" color="gray">
-            {" "}
+
             Suggestions for You
           </Typography>
           <Button variant="text" style={{ color: "white" }} size="small">
@@ -68,6 +68,7 @@ function FriendSuggestions() {
         ))}
         {footer.map((footers) => (
           <button
+          key={footers.id}
             onMouseEnter={(e) => {
               e.target.style.textDecoration = "underline";
             }}
