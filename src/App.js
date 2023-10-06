@@ -24,10 +24,10 @@ function App() {
       <CssBaseline />
       <Router>
         <Grid container>
-          <Grid item xs={12} sm={3} md={0.5}>
+          <Grid item   md={2}      >
             <Sidebar />
           </Grid>
-          <Grid item xs={12} sm={9} md={10}>
+          <Grid item   md={10}    >
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/profile" element={<Profile />} />

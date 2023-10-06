@@ -15,7 +15,7 @@ const ExplorePage = () => {
     <div>
       <Container>
         <Grid container spacing={2}>
-          <Grid item xs={12} sm={3}></Grid>
+          <Grid item xs={12} sm={2}   lg={2}></Grid>
           <Grid item xs={12} sm={9}>
             <Grid container spacing={2}>
               {mockPosts.map((post) => (

@@ -18,14 +18,14 @@ import MoreHorizIcon from "@mui/icons-material/MoreHoriz";
 
 const cardStyle = {
   color: "white",
-  width: "50%",
+  width: "70%",
  
 };
 
 function Post({ post }) {
   return (
     <Grid container>
-    <Grid item xs={12} sm={5}> </Grid>
+    <Grid item xs={12} sm={4} lg={2}  >  </Grid>
  
     <Card sx={cardStyle} className="custom-card">
       <CardHeader

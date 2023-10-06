@@ -5,7 +5,7 @@ import FriendSuggestions from "./UsersSuggestion/FriendSuggestions";
 
 function Home() {
   return (
-    <div>
+ 
       <div style={{ display: "flex" }}>
         <div>
           <CircularAvatar />
@@ -16,7 +16,7 @@ function Home() {
           <FriendSuggestions />
         </div>
       </div>
-    </div>
+    
   );
 }
 

@@ -10,7 +10,7 @@ import { Typography } from "@mui/material";
 function CreatePostModal({ open, onClose }) {
   const [title, setTitle] = useState("");
   const [body, setBody] = useState("");
-  const [imageUrl, setImageUrl] = useState("");
+  const [selectedImage, setSelectedImage] = useState(null);
 
   const handleTitleChange = (event) => {
     setTitle(event.target.value);
@@ -20,11 +20,12 @@ function CreatePostModal({ open, onClose }) {
     setBody(event.target.value);
   };
 
-  const handleImageUrlChange = (event) => {
-    setImageUrl(event.target.value);
+  const handleImageChange = (event) => {
+    const file = event.target.files[0];
+    setSelectedImage(file);
   };
 
-  const handleShare = () => {
+  const handleShare = () => {   
     onClose();
   };
 
@@ -55,7 +56,7 @@ function CreatePostModal({ open, onClose }) {
           InputProps={{ style: { color: "white", background: "#50505080" } }}
           style={{ marginBottom: "10px" }}
         />
-        <Typography>Title</Typography>
+        <Typography>Body</Typography>
         <TextField
           fullWidth
           margin="dense"
@@ -66,13 +67,12 @@ function CreatePostModal({ open, onClose }) {
           InputProps={{ style: { color: "white", background: "#50505080" } }}
           style={{ marginBottom: "10px" }}
         />
-        <Typography>Title</Typography>
-        <TextField
-          fullWidth
-          margin="dense"
-          value={imageUrl}
-          onChange={handleImageUrlChange}
-          InputProps={{ style: { color: "white", background: "#50505080" } }}
+        <Typography>Image</Typography>
+        <input
+          type="file"
+          accept="image/*"
+          onChange={handleImageChange}
+          style={{ color: "white",   marginBottom: "10px" }}
         />
       </DialogContent>
       <DialogActions>

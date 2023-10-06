@@ -17,8 +17,8 @@ import { friends } from "./MessageData";
 function Messages() {
   return (
     <Grid container>
-      <Grid item xs={12} sm={2.2}> </Grid>
-      <Grid item xs={12} sm={9}>
+      <Grid item xs={12} sm={0.5}   >  </Grid>
+      <Grid item xs={12} sm={11} lg={11}>
         <div style={{ display: "flex" }}>
           <div
             style={{

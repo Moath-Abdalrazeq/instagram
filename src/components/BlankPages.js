@@ -18,7 +18,7 @@ const ComingSoon = () => {
   return (
    
     <Grid container spacing={2}>
-    <Grid item xs={12} sm={3}></Grid>
+    <Grid item xs={12} sm={1} lg={2}></Grid>
     <Grid item xs={12} sm={9}>
     <Container style={containerStyle} >
       <img
