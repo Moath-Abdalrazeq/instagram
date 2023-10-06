@@ -24,16 +24,16 @@ function App() {
       <CssBaseline />
       <Router>
         <Grid container>
-          <Grid item   md={2}      >
+          <Grid item md={2}>
             <Sidebar />
           </Grid>
-          <Grid item   md={10}    >
+          <Grid item md={10}>
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/profile" element={<Profile />} />
               <Route path="/messages" element={<Messages />} />
               <Route path="/explore" element={<Explore />} />
-              <Route path="/blank" element={<BlankPages/>} />
+              <Route path="/blank" element={<BlankPages />} />
             </Routes>
           </Grid>
         </Grid>

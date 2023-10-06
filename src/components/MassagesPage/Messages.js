@@ -11,13 +11,15 @@ import {
   Grid,
 } from "@mui/material";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
-import FiberManualRecordIcon from "@mui/icons-material/FiberManualRecord";  
+import FiberManualRecordIcon from "@mui/icons-material/FiberManualRecord";
 import { MessageIcon, NewMessageIcon } from "./MessageIcon";
 import { friends } from "./MessageData";
 function Messages() {
   return (
     <Grid container>
-      <Grid item xs={12} sm={0.5}   >  </Grid>
+      <Grid item xs={12} sm={0.5}>
+        
+      </Grid>
       <Grid item xs={12} sm={11} lg={11}>
         <div style={{ display: "flex" }}>
           <div
@@ -66,10 +68,9 @@ function Messages() {
                       <ListItemText primary={friend.name} />
                     </div>
                     <div style={{ display: "flex", alignItems: "center" }}>
-                      
                       <Typography
                         variant="body1"
-                        color={friend.isRead ? "gray" : "primary"} 
+                        color={friend.isRead ? "gray" : "primary"}
                       >
                         {friend.message}
                       </Typography>
