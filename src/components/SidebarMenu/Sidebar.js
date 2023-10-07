@@ -26,14 +26,14 @@ function Sidebar() {
       backgroundColor: "rgba(255, 255, 255, 0.1)",
     },
   };
-  const menu = [
-    {id: 1, text: "", icon: <InstagramLogo />, path: "/" },
-    {id: 2, text: "Home", icon: <HomeIcon  />, path: "/" },
-    {id:3,text: "Search",icon: <SearchIcon   />,path: "/blank"},
-    {id:4,text: "Explore", icon: <ExploreIcon   />, path: "/explore" },
-    {id:5,text: "Reels", icon: <SlideshowIcon   />, path: "/blank" },
-    {id: 6,text: "Messages", icon: <ChatIcon   />, path: "/messages" },
-    {id: 7,text: "Notifications",icon: <FavoriteBorderIcon   />,path: "/blank"},
+  const menu = [ 
+    {id: 1, text: "",             icon: <InstagramLogo />,    path: "/" },
+    {id: 2, text: "Home",         icon: <HomeIcon />,         path: "/" },
+    {id: 3, text: "Search",       icon: <SearchIcon />,       path: "/blank"},
+    {id: 4, text: "Explore",      icon: <ExploreIcon />,      path: "/explore" },
+    {id: 5, text: "Reels",        icon: <SlideshowIcon/>,     path: "/blank" },
+    {id: 6, text: "Messages",     icon: <ChatIcon/>,          path: "/messages" },
+    {id: 7, text: "Notifications",icon: <FavoriteBorderIcon/>,path: "/blank"},
     {
       id: 8,
       text: "Create",
