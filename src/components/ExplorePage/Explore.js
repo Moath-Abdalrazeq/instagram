@@ -1,6 +1,7 @@
 import React from "react";
 import { Container, Grid, Card, CardMedia, styled } from "@mui/material";
 import { mockPosts } from "./ExploreData";
+import Sidebar from "../SidebarMenu/Sidebar";
 
 const StyledCardMedia = styled(CardMedia)({
   transition: "transform 0.2s, box-shadow 0.2s",
@@ -13,10 +14,10 @@ const StyledCardMedia = styled(CardMedia)({
 const ExplorePage = () => {
   return (
     <div>
-      <Container>
+      <Container>    
         <Grid container spacing={2}>
-          <Grid item xs={12} sm={2}   lg={2}></Grid>
-          <Grid item xs={12} sm={9}>
+          <Grid item xs={12} sm={2} md={4} >   <Sidebar/></Grid>
+          <Grid item xs={12} sm={9} md={8} >
             <Grid container spacing={2}>
               {mockPosts.map((post) => (
                 <Grid item xs={12} sm={6} md={4} key={post.id}>

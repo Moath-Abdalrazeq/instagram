@@ -9,6 +9,9 @@ import { createTheme, ThemeProvider } from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
 import Grid from "@mui/material/Grid";
 import BlankPages from "./components/BlankPages";
+import SignIn from "./components/Auth/SignIn";
+import SignUp from "./components/Auth/SignUp";
+
 const blackTheme = createTheme({
   palette: {
     background: {
@@ -24,12 +27,13 @@ function App() {
       <CssBaseline />
       <Router>
         <Grid container>
-          <Grid item md={2}>
-            <Sidebar />
-          </Grid>
-          <Grid item md={10}>
+          <Grid item md={3} lg={1} ></Grid>
+
+          <Grid item>
             <Routes>
-              <Route path="/" element={<Home />} />
+              <Route path="/" element={<SignIn />} />
+              <Route path="/signup" element={<SignUp />} />
+              <Route path="/home" element={<Home />} />
               <Route path="/profile" element={<Profile />} />
               <Route path="/messages" element={<Messages />} />
               <Route path="/explore" element={<Explore />} />

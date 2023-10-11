@@ -11,6 +11,7 @@ import {
   CardActionArea,
 } from "@mui/material";
 import SettingsIcon from "@mui/icons-material/Settings";
+import Sidebar from "../SidebarMenu/Sidebar";
 
 function Profile() {
   const [selectedTab, setSelectedTab] = useState("Posts");
@@ -31,8 +32,8 @@ function Profile() {
   return (
     <Container style={{ marginTop: "40px", color: "white" }}>
       <Grid container spacing={2}>
-        <Grid item xs={12} sm={2} lg={2}></Grid>
-        <Grid item xs={12} sm={9}>
+        <Grid item xs={12} sm={4}  > <Sidebar/> </Grid>
+        <Grid item xs={12} sm={8}>
           <div style={{ display: "flex", alignItems: "center" }}>
             <Avatar
               sx={{ width: 100, height: 100 }}
