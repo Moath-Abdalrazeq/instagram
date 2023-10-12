@@ -8,7 +8,7 @@ function Home() {
   return (
  
       <div style={{ display: "flex" }}>
-             <Grid item md={3}>
+             <Grid item md={8}>
               <Sidebar />
             </Grid>
         <div>
@@ -16,9 +16,9 @@ function Home() {
           <Feed />
         </div>
 
-        <div>
+        <Grid item md={12}>
           <FriendSuggestions />
-        </div>
+        </Grid>
       </div>
     
   );
