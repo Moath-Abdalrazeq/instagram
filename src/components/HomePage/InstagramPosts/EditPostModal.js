@@ -12,7 +12,7 @@ const EditPostModal = ({ isOpen, onClose, onSave, initialDescription }) => {
   };
 
   const handleClose = () => {
-    setNewDescription(initialDescription); // Reset the description
+    setNewDescription(initialDescription);  
     onClose();
   };
 

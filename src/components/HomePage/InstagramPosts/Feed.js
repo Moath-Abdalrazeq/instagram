@@ -3,7 +3,7 @@ import Post from "./Post";
 import CreatePostModal from "../../CreatePostModal";
 import axios from "axios";
 import Sidebar from "../../SidebarMenu/Sidebar";
-import EditPostModal from "./EditPostModal"; // Create EditPostModal component
+import EditPostModal from "./EditPostModal";  
 
 function Feed() {
   const [posts, setPosts] = useState([]);
@@ -51,7 +51,7 @@ function Feed() {
         },
       })
       .then((response) => {
-        // Handle the response or update the local state as needed
+      
         console.log(response);
       })
       .catch((error) => {
