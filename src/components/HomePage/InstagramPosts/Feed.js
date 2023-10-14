@@ -3,10 +3,13 @@ import Post from "./Post";
 import CreatePostModal from "../../CreatePostModal";
 import axios from "axios";
 import Sidebar from "../../SidebarMenu/Sidebar";
+import EditPostModal from "./EditPostModal"; // Create EditPostModal component
 
 function Feed() {
   const [posts, setPosts] = useState([]);
   const [isCreatePostModalOpen, setCreatePostModalOpen] = useState(false);
+  const [isEditPostModalOpen, setEditPostModalOpen] = useState(false);
+  const [editedPost, setEditedPost] = useState({ id: null, description: "" });
   const token = localStorage.getItem("token");
 
   useEffect(() => {
@@ -48,6 +51,7 @@ function Feed() {
         },
       })
       .then((response) => {
+        // Handle the response or update the local state as needed
         console.log(response);
       })
       .catch((error) => {
@@ -68,10 +72,21 @@ function Feed() {
           key={post.id}
           post={post}
           onDelete={(postId) => handleDeletePost(postId)}
-          onEdit={(postId, newDescription) => handleEditPost(postId, newDescription)}
+          onEdit={(postId, description) => {
+            setEditedPost({ id: postId, description });
+            setEditPostModalOpen(true);
+          }}
         />
       ))}
-      <CreatePostModal open={isCreatePostModalOpen} onClose={() => setCreatePostModalOpen(false)} onPost={handleCreatePost} />
+      <EditPostModal
+        isOpen={isEditPostModalOpen}
+        onClose={() => setEditPostModalOpen(false)}
+        onSave={(newDescription) => {
+          handleEditPost(editedPost.id, newDescription);
+          setEditPostModalOpen(false);
+        }}
+        initialDescription={editedPost.description}
+      />
     </div>
   );
 }
