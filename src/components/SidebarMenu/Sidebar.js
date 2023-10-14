@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import {Drawer,List,ListItem,ListItemText,ListItemIcon,Avatar} from "@mui/material";
+import { Drawer, List, ListItem, ListItemText, ListItemIcon, Avatar } from "@mui/material";
 import { useState } from "react";
 import HomeIcon from "@mui/icons-material/Home";
 import ExploreIcon from "@mui/icons-material/Explore";
@@ -10,34 +10,38 @@ import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import AddCircleOutlineIcon from "@mui/icons-material/AddCircleOutline";
 import MenuIcon from "@mui/icons-material/Menu";
 import InstagramLogo from "../../assets/InstagramLogo";
-import CreatePostModal from "../CreatePostModal";
+import CreatePostModal from "../CreatePostModal"; 
 
-function Sidebar() {
+function Sidebar({ setCreatePostModalOpen, handleCreatePost }) {
   const [isCreatePostModalOpen, setIsCreatePostModalOpen] = useState(false);
+
   const handleCreatePostClick = () => {
     setIsCreatePostModalOpen(true);
   };
+
   const closeCreatePostModal = () => {
     setIsCreatePostModalOpen(false);
   };
+
   const listItemStyle = {
     color: "#FFFFFF",
     "&:hover": {
       backgroundColor: "rgba(255, 255, 255, 0.1)",
     },
   };
-  const menu = [ 
-    {id: 1, text: "",             icon: <InstagramLogo />,    path: "/" },
-    {id: 2, text: "Home",         icon: <HomeIcon />,         path: "/home" },
-    {id: 3, text: "Search",       icon: <SearchIcon />,       path: "/blank"},
-    {id: 4, text: "Explore",      icon: <ExploreIcon />,      path: "/explore" },
-    {id: 5, text: "Reels",        icon: <SlideshowIcon/>,     path: "/blank" },
-    {id: 6, text: "Messages",     icon: <ChatIcon/>,          path: "/messages" },
-    {id: 7, text: "Notifications",icon: <FavoriteBorderIcon/>,path: "/blank"},
+
+  const menu = [
+    { id: 1, text: "", icon: <InstagramLogo />, path: "/" },
+    { id: 2, text: "Home", icon: <HomeIcon />, path: "/home" },
+    { id: 3, text: "Search", icon: <SearchIcon />, path: "/blank" },
+    { id: 4, text: "Explore", icon: <ExploreIcon />, path: "/explore" },
+    { id: 5, text: "Reels", icon: <SlideshowIcon />, path: "/blank" },
+    { id: 6, text: "Messages", icon: <ChatIcon />, path: "/messages" },
+    { id: 7, text: "Notifications", icon: <FavoriteBorderIcon />, path: "/blank" },
     {
       id: 8,
       text: "Create",
-      icon:<AddCircleOutlineIcon/>,
+      icon: <AddCircleOutlineIcon />,
       onClick: handleCreatePostClick,
     },
     {
@@ -46,7 +50,7 @@ function Sidebar() {
       icon: <Avatar src={require("../../assets/moath.jpeg")} />,
       path: "/profile",
     },
-  ];
+  ]
 
   return (
     <Drawer variant="permanent">
@@ -69,7 +73,7 @@ function Sidebar() {
               onClick={item.onClick}
               sx={listItemStyle}
             >
-              <ListItemIcon style={{color:"white"}}>{item.icon}</ListItemIcon>
+              <ListItemIcon style={{ color: "white" }}>{item.icon}</ListItemIcon>
               <ListItemText style={{ color: "white" }} primary={item.text} />
             </ListItem>
           ))}
@@ -78,16 +82,13 @@ function Sidebar() {
         <div>
           <ListItem component={Link} to="/blank" sx={listItemStyle}>
             <ListItemIcon>
-              <MenuIcon style={{ color: "white" }}  />
+              <MenuIcon style={{ color: "white" }} />
             </ListItemIcon>
             <ListItemText primary="Menu" />
           </ListItem>
         </div>
-        <CreatePostModal
-          open={isCreatePostModalOpen}
-          onClose={closeCreatePostModal}
-        />
       </List>
+      <CreatePostModal open={isCreatePostModalOpen} onClose={closeCreatePostModal} onPost={handleCreatePost} />
     </Drawer>
   );
 }

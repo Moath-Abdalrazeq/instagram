@@ -2,9 +2,10 @@ import React, { useState, useEffect } from "react";
 import Post from "./Post";
 import CreatePostModal from "../../CreatePostModal";
 import axios from "axios";
+import Sidebar from "../../SidebarMenu/Sidebar";
 
 function Feed() {
-  const [memories, setMemories] = useState([]);
+  const [posts, setPosts] = useState([]);
   const [isCreatePostModalOpen, setCreatePostModalOpen] = useState(false);
   const token = localStorage.getItem("token");
 
@@ -16,10 +17,10 @@ function Feed() {
         },
       })
       .then((response) => {
-        setMemories(response.data.posts);
+        setPosts(response.data.posts);
       })
       .catch((error) => {
-        console.log("Error Fetching memories", error);
+        console.log("Error Fetching posts", error);
       });
   }, [token]);
 
@@ -31,8 +32,8 @@ function Feed() {
         },
       })
       .then(() => {
-        const updatedMemories = memories.filter((memory) => memory.id !== postId);
-        setMemories(updatedMemories);
+        const updatedPosts = posts.filter((post) => post.id !== postId);
+        setPosts(updatedPosts);
       })
       .catch((error) => {
         console.error("Error deleting post:", error);
@@ -55,13 +56,14 @@ function Feed() {
   };
 
   const handleCreatePost = (newPost) => {
-    setMemories([newPost, ...memories]);
+    setPosts([newPost, ...posts]);
+    setCreatePostModalOpen(false);
   };
 
   return (
     <div>
-      <button onClick={() => setCreatePostModalOpen(true)}>Create Post</button>
-      {memories.map((post) => (
+      <Sidebar setCreatePostModalOpen={setCreatePostModalOpen} handleCreatePost={handleCreatePost} />
+      {posts.map((post) => (
         <Post
           key={post.id}
           post={post}
@@ -69,12 +71,7 @@ function Feed() {
           onEdit={(postId, newDescription) => handleEditPost(postId, newDescription)}
         />
       ))}
-
-      <CreatePostModal
-        open={isCreatePostModalOpen}
-        onClose={() => setCreatePostModalOpen(false)}
-        onPost={handleCreatePost}
-      />
+      <CreatePostModal open={isCreatePostModalOpen} onClose={() => setCreatePostModalOpen(false)} onPost={handleCreatePost} />
     </div>
   );
 }

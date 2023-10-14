@@ -12,7 +12,7 @@ const style = {
   left: "50%",
   transform: "translate(-50%, -50%)",
   width: 400,
-  bgcolor: "#f2f2f2",
+  bgcolor: "black",
   border: "2px solid #000",
   boxShadow: 24,
   p: 4,
@@ -67,11 +67,11 @@ function CreatePostModal({ open, onClose, onPost }) {
   return (
     <Modal open={open} onClose={onClose} aria-labelledby="modal-modal-description" aria-describedby="modal-modal-description">
       <Box sx={style}>
-        <Typography variant="h6" component="div" sx={{ mb: 2, fontWeight: 900, fontFamily: "Signika" }}>
-          Create a memory
+        <Typography variant="h6" component="div" sx={{ mb: 2, fontWeight: 900, fontFamily: "Signika", color:"white" }}>
+          Create a post
         </Typography>
         <form>
-          <Input placeholder="Description" value={description} onChange={handleDescriptionChange} required fullWidth sx={{ mb: 2 }} />
+          <Input  style={{color:"white"}} placeholder="Description" value={description} onChange={handleDescriptionChange} required fullWidth sx={{ mb: 2 }} />
           {imageCover && (
             <img src={imageCover} alt="Uploaded" style={{ width: "100%", marginBottom: "1rem" }} />
           )}
