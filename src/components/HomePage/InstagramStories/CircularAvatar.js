@@ -7,7 +7,7 @@ import { Container } from "@mui/material";
 function CircularAvatar() {
   return (
     <Container >
-      <div style={{ display: "flex" , marginLeft:"10px" ,marginTop: "20px" }}>
+      <div style={{ display: "flex" , marginLeft:"auto" ,marginTop: "20px" }}>
         {statusCircular.map((item) => {
           return <AvatarComponent key={item.id} image={item} />;
         })}

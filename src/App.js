@@ -27,7 +27,7 @@ function App() {
       <CssBaseline />
       <Router>
         <Grid container>
-          <Grid item md={3} lg={1} ></Grid>
+          <Grid item md={3} lg={1} > </Grid>
 
           <Grid item>
             <Routes>

@@ -45,8 +45,6 @@ function Post({ post, onEdit, onDelete }) {
 
   return (
       <Grid container>
-        <Grid item xs={12} sm={1}></Grid>
-  
         <Card sx={{ width: "70%", margin: "auto", color: "white" }}>
           <CardHeader
             avatar={
