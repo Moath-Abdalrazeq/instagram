@@ -5,7 +5,6 @@ import Typography from "@mui/material/Typography";
 import Input from "@mui/material/Input";
 import Button from "@mui/material/Button";
 import axios from "axios";
-
 const style = {
   position: "absolute",
   top: "50%",
