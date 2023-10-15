@@ -3,7 +3,7 @@ import Modal from "@mui/material/Modal";
 import Button from "@mui/material/Button";
 import TextField from "@mui/material/TextField";
 import Paper from "@mui/material/Paper";
-
+import Input from "@mui/material/Input";
 const EditPostModal = ({ isOpen, onClose, onSave, initialDescription }) => {
   const [newDescription, setNewDescription] = useState(initialDescription);
 
@@ -12,7 +12,7 @@ const EditPostModal = ({ isOpen, onClose, onSave, initialDescription }) => {
   };
 
   const handleClose = () => {
-    setNewDescription(initialDescription);  
+    setNewDescription(initialDescription);
     onClose();
   };
 
@@ -22,7 +22,7 @@ const EditPostModal = ({ isOpen, onClose, onSave, initialDescription }) => {
         style={{
           position: "absolute",
           width: 400,
-          backgroundColor: "#fff",
+          backgroundColor: "black",
           border: "2px solid #000",
           boxShadow: "5px 10px 18px #888888",
           padding: "16px",
@@ -31,17 +31,22 @@ const EditPostModal = ({ isOpen, onClose, onSave, initialDescription }) => {
           transform: "translate(-50%, -50%)",
         }}
       >
-        <h2>Edit Post Description</h2>
-        <TextField
-          label="Description"
-          multiline
-          rows={2}
-          variant="outlined"
-          fullWidth
+        <h2 style={{ color: "white" }}>Edit Post Description</h2>
+        <Input
+          style={{ color: "white" }}
+          placeholder="Description"
           value={newDescription}
           onChange={(e) => setNewDescription(e.target.value)}
+          fullWidth
+          sx={{ mb: 2 }}
         />
-        <Button variant="contained" color="primary" style={{marginTop:"10px"}} onClick={handleSave}>
+ 
+        <Button
+          variant="contained"
+          color="primary"
+          style={{ marginTop: "10px" }}
+          onClick={handleSave}
+        >
           Save
         </Button>
       </Paper>

@@ -64,24 +64,94 @@ function CreatePostModal({ open, onClose, onPost }) {
   };
 
   return (
-    <Modal open={open} onClose={onClose} aria-labelledby="modal-modal-description" aria-describedby="modal-modal-description">
+    <Modal
+      open={open}
+      onClose={onClose}
+      aria-labelledby="modal-modal-description"
+      aria-describedby="modal-modal-description"
+    >
       <Box sx={style}>
-        <Typography variant="h6" component="div" sx={{ mb: 2, fontWeight: 900, fontFamily: "Signika", color:"white" }}>
+        <Typography
+          variant="h6"
+          component="div"
+          sx={{ mb: 2, fontWeight: 900, fontFamily: "Signika", color: "white" }}
+        >
           Create a post
         </Typography>
         <form>
-          <Input  style={{color:"white"}} placeholder="Description" value={description} onChange={handleDescriptionChange} required fullWidth sx={{ mb: 2 }} />
+          <Input
+            style={{ color: "white" }}
+            placeholder="Description"
+            value={description}
+            onChange={handleDescriptionChange}
+            required
+            fullWidth
+            sx={{ mb: 2 }}
+          />
           {imageCover && (
-            <img src={imageCover} alt="Uploaded" style={{ width: "100%", marginBottom: "1rem" }} />
+            <img
+              src={imageCover}
+              alt="Uploaded"
+              style={{ width: "100%", marginBottom: "1rem" }}
+            />
           )}
 
           <label htmlFor="image-upload">
-            <Button variant="contained" component="span" sx={{ fontFamily: "Signika", width: "100%", textAlign: "left", fontWeight: 900, marginBottom: "5px", paddingTop: "5px", paddingBottom: "5px", borderRadius: "10px", fontSize: "14px", color: "black", backgroundColor: "white", ":hover": { bgcolor: "white", color: "black" }, "&:active": { boxShadow: "none", backgroundColor: "white", color: "black" } }}>
+            <Button
+              variant="contained"
+              component="span"
+              sx={{
+                fontFamily: "Signika",
+                width: "100%",
+                textAlign: "left",
+                fontWeight: 900,
+                marginBottom: "5px",
+                paddingTop: "5px",
+                paddingBottom: "5px",
+                borderRadius: "10px",
+                fontSize: "14px",
+                color: "black",
+                backgroundColor: "white",
+                ":hover": { bgcolor: "white", color: "black" },
+                "&:active": {
+                  boxShadow: "none",
+                  backgroundColor: "white",
+                  color: "black",
+                },
+              }}
+            >
               Upload Image
             </Button>
           </label>
-          <input id="image-upload" type="file" accept="image/*" onChange={handleImageChange} style={{ display: "none" }} />
-          <Button type="submit" variant="contained" color="primary" onClick={handleSubmit} sx={{ fontWeight: 900, paddingTop: "5px", fontFamily: "Signika", paddingBottom: "5px", borderRadius: "10px", fontSize: "14px", color: "black", backgroundColor: "white", ":hover": { bgcolor: "white", color: "black" }, "&:active": { boxShadow: "none", backgroundColor: "white", color: "black" } }}>
+          <input
+            id="image-upload"
+            type="file"
+            accept="image/*"
+            onChange={handleImageChange}
+            style={{ display: "none" }}
+          />
+          <Button
+            type="submit"
+            variant="contained"
+            color="primary"
+            onClick={handleSubmit}
+            sx={{
+              fontWeight: 900,
+              paddingTop: "5px",
+              fontFamily: "Signika",
+              paddingBottom: "5px",
+              borderRadius: "10px",
+              fontSize: "14px",
+              color: "black",
+              backgroundColor: "white",
+              ":hover": { bgcolor: "white", color: "black" },
+              "&:active": {
+                boxShadow: "none",
+                backgroundColor: "white",
+                color: "black",
+              },
+            }}
+          >
             Create
           </Button>
         </form>
