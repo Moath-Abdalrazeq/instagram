@@ -18,16 +18,16 @@ function FriendSuggestions() {
           }}
         >
           <Avatar
-            src={require("../../../assets/moath.jpeg")}
-            alt="moath"
+            src={require("../../../assets/ward.jpeg")}
+            alt="ward"
             style={{ marginRight: "10px" }}
           />
           <div>
             <div style={{ display: "flex", alignItems: "center" }}>
-              <Typography variant="body1">moath_abdalrazeq</Typography>
+              <Typography variant="body1">ward_abdalrazeq</Typography>
             </div>
             <Typography variant="body1" color="gray">
-              Moath Abdalrazeq
+              Ward Abdalrazeq
             </Typography>
           </div>
           <div style={{ marginLeft: "auto" }}>

@@ -37,11 +37,11 @@ function Profile() {
           <div style={{ display: "flex", alignItems: "center" }}>
             <Avatar
               sx={{ width: 100, height: 100 }}
-              src={require("../../assets/moath.jpeg")}
+              src={require("../../assets/ward.jpeg")}
             />
             <div style={{ marginLeft: "30px", display: "flex" }}>
               <Typography style={{ marginRight: "30px" }} variant="h4">
-                moath_abdalrazeq
+                ward_abdalrazeq
               </Typography>
               <Button style={buttonStyle} variant="contained">
                 Edit Profile
@@ -56,15 +56,15 @@ function Profile() {
           </div>
           <div style={{ marginTop: "20px" }}>
             <div style={{ display: "flex", justifyContent: "space-evenly" }}>
-              <Typography variant="subtitle2">10 Posts</Typography>
-              <Typography variant="subtitle2">250 Followers</Typography>
-              <Typography variant="subtitle2">300 Following</Typography>
+              <Typography variant="subtitle2">5 Posts</Typography>
+              <Typography variant="subtitle2">400 Followers</Typography>
+              <Typography variant="subtitle2">600 Following</Typography>
             </div>
             <div style={{ marginLeft: "120px", marginTop: "20px" }}>
-              <Typography variant="subtitle1">Moath A Abdalrazeq</Typography>
-              <Typography variant="subtitle1">@aaup.edu</Typography>
+              <Typography variant="subtitle1">Ward Abdalrazeq</Typography>
+              <Typography variant="subtitle1">Tubas</Typography>
               <Typography variant="subtitle1">
-                Computer Engineering 💻❤
+                Computer Engineering 
               </Typography>
             </div>
           </div>

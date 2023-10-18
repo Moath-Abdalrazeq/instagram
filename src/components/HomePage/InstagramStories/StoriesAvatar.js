@@ -1,6 +1,6 @@
 import React from "react";
 
-import { statusCircular } from "../../../data";
+import { statusCircular } from "../../../Avatarsdata";
 import AvatarComponent from "./AvatarComponent";
 import { Container } from "@mui/material";
 

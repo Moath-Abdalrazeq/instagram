@@ -33,11 +33,7 @@ function CreatePostModal({ open, onClose, onPost }) {
     const file = event.target.files[0];
     setImage(file);
 
-    const reader = new FileReader();
-    reader.onload = () => {
-      setImageCover(reader.result);
-    };
-    reader.readAsDataURL(file);
+ 
   };
 
   const handleSubmit = (event) => {

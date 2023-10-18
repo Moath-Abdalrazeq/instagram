@@ -1,6 +1,6 @@
 import React from "react";
 import { Container, Typography, Grid } from "@mui/material";
-import soon from "../assets/soon.png";
+import soon from "../assets/coming-soon.avif";
 import Sidebar from "./SidebarMenu/Sidebar";
 
 const ComingSoon = () => {
@@ -25,11 +25,9 @@ const ComingSoon = () => {
             <img
               src={soon}
               alt="Coming Soon Logo"
-              style={{ width: "50%", marginBottom: "20px" }}
+              style={{ width: "100%", marginBottom: "20px" , marginRight:"200px" }}
             />
-            <Typography variant="h3" gutterBottom>
-              Coming Soon
-            </Typography>
+          
           </Container>
         </Grid>
       </Grid>

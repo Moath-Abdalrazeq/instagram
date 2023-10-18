@@ -46,8 +46,8 @@ function Sidebar({ setCreatePostModalOpen, handleCreatePost }) {
     },
     {
       id: 9,
-      text: "moath_abdalrazeq",
-      icon: <Avatar src={require("../../assets/moath.jpeg")} />,
+      text: "ward_abdalrazeq",
+      icon: <Avatar src={require("../../assets/ward.jpeg")} />,
       path: "/profile",
     },
   ]

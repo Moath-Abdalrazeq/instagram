@@ -1,5 +1,5 @@
 import React from "react";
-import CircularAvatar from "./InstagramStories/CircularAvatar";
+import StoriesAvatar from "./InstagramStories/StoriesAvatar";
 import Feed from "./InstagramPosts/Feed";
 import FriendSuggestions from "./UsersSuggestion/FriendSuggestions";
 import Sidebar from "../SidebarMenu/Sidebar"
@@ -10,7 +10,7 @@ function Home() {
         <div style={{width:"80%"}}> <Sidebar/></div>
         <Grid item xs={9} md={12} >
           <div >
-            <CircularAvatar />
+            <StoriesAvatar />
             <Feed />
           </div>
         </Grid>
