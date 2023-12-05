@@ -32,8 +32,6 @@ function CreatePostModal({ open, onClose, onPost }) {
   const handleImageChange = (event) => {
     const file = event.target.files[0];
     setImage(file);
-
- 
   };
 
   const handleSubmit = (event) => {

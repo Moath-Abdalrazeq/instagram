@@ -25,9 +25,12 @@ const ComingSoon = () => {
             <img
               src={soon}
               alt="Coming Soon Logo"
-              style={{ width: "100%", marginBottom: "20px" , marginRight:"200px" }}
+              style={{
+                width: "100%",
+                marginBottom: "20px",
+                marginRight: "200px",
+              }}
             />
-          
           </Container>
         </Grid>
       </Grid>

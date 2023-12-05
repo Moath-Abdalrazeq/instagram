@@ -16,12 +16,12 @@ import Sidebar from "../SidebarMenu/Sidebar";
 function Profile() {
   const [selectedTab, setSelectedTab] = useState("Posts");
   const images = [
-    { id: 1, img:require("../../assets/ExplorePics/explorePic10.webp")},
-    { id: 2, img:require("../../assets/ExplorePics/explorePic11.webp") },
-    { id: 3, img:require("../../assets/ExplorePics/explorePic12.webp") },
-    { id: 4, img:require("../../assets/ExplorePics/explorePic13.webp") },
-    { id: 5, img:require("../../assets/ExplorePics/explorePic14.webp") },
-    { id: 6, img:require("../../assets/ExplorePics/explorePic4.avif") },
+    { id: 1, img: require("../../assets/ExplorePics/explorePic10.webp") },
+    { id: 2, img: require("../../assets/ExplorePics/explorePic11.webp") },
+    { id: 3, img: require("../../assets/ExplorePics/explorePic12.webp") },
+    { id: 4, img: require("../../assets/ExplorePics/explorePic13.webp") },
+    { id: 5, img: require("../../assets/ExplorePics/explorePic14.webp") },
+    { id: 6, img: require("../../assets/ExplorePics/explorePic4.avif") },
   ];
   const buttonStyle = {
     background: "white",
@@ -32,7 +32,10 @@ function Profile() {
   return (
     <Container style={{ marginTop: "40px", color: "white" }}>
       <Grid container spacing={2}>
-        <Grid item xs={12} sm={4}  > <Sidebar/> </Grid>
+        <Grid item xs={12} sm={4}>
+          {" "}
+          <Sidebar />{" "}
+        </Grid>
         <Grid item xs={12} sm={8}>
           <div style={{ display: "flex", alignItems: "center" }}>
             <Avatar
@@ -41,7 +44,7 @@ function Profile() {
             />
             <div style={{ marginLeft: "30px", display: "flex" }}>
               <Typography style={{ marginRight: "30px" }} variant="h4">
-                ward_abdalrazeq
+                moath_abdalrazeq
               </Typography>
               <Button style={buttonStyle} variant="contained">
                 Edit Profile
@@ -61,11 +64,9 @@ function Profile() {
               <Typography variant="subtitle2">600 Following</Typography>
             </div>
             <div style={{ marginLeft: "120px", marginTop: "20px" }}>
-              <Typography variant="subtitle1">Ward Abdalrazeq</Typography>
+              <Typography variant="subtitle1">Moath Abdalrazeq</Typography>
               <Typography variant="subtitle1">Tubas</Typography>
-              <Typography variant="subtitle1">
-                Computer Engineering 
-              </Typography>
+              <Typography variant="subtitle1">Computer Engineering</Typography>
             </div>
           </div>
           <Divider component="div" sx={{ my: 2, backgroundColor: "gray" }} />

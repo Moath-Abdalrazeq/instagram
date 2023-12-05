@@ -8,7 +8,7 @@ export const friends = [
   },
   {
     id: 2,
-    name: "Ward",
+    name: "Moath",
     avatar: require("../../assets/Avatars/fatima.jpeg"),
     message: "صباح الخير",
     isRead: true,
@@ -34,6 +34,4 @@ export const friends = [
     message: "صباح الخير",
     isRead: false,
   },
- 
- 
 ];

@@ -18,12 +18,12 @@ import Sidebar from "../SidebarMenu/Sidebar";
 
 function Messages() {
   return (
-    <Grid container >
-      <Grid item xs={12} sm={2}  >
+    <Grid container>
+      <Grid item xs={12} sm={2}>
         <Sidebar />
       </Grid>
 
-      <Grid item xs={12} sm={4}  >
+      <Grid item xs={12} sm={4}>
         <div
           style={{
             color: "white",
@@ -40,7 +40,7 @@ function Messages() {
             }}
           >
             <div style={{ display: "flex" }}>
-              <Typography color="white">ward_abdalrazeq </Typography>
+              <Typography color="white">moath_abdalrazeq </Typography>
               <KeyboardArrowDownIcon color="primary" />
             </div>
             <div>
@@ -89,14 +89,13 @@ function Messages() {
           </List>
         </div>
       </Grid>
-      <Grid item xs={12} sm={6}   width="650px">
+      <Grid item xs={12} sm={6} width="650px">
         <Grid
-
           container
           direction="column"
           alignItems="center"
           justifyContent="center"
-          style={{ minHeight: "100vh", padding: "16px"   }}
+          style={{ minHeight: "100vh", padding: "16px" }}
         >
           <MessageIcon />
           <div

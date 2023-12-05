@@ -1,5 +1,12 @@
 import { Link } from "react-router-dom";
-import { Drawer, List, ListItem, ListItemText, ListItemIcon, Avatar } from "@mui/material";
+import {
+  Drawer,
+  List,
+  ListItem,
+  ListItemText,
+  ListItemIcon,
+  Avatar,
+} from "@mui/material";
 import { useState } from "react";
 import HomeIcon from "@mui/icons-material/Home";
 import ExploreIcon from "@mui/icons-material/Explore";
@@ -10,7 +17,7 @@ import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import AddCircleOutlineIcon from "@mui/icons-material/AddCircleOutline";
 import MenuIcon from "@mui/icons-material/Menu";
 import InstagramLogo from "../../assets/InstagramLogo";
-import CreatePostModal from "../CreatePostModal"; 
+import CreatePostModal from "../CreatePostModal";
 
 function Sidebar({ setCreatePostModalOpen, handleCreatePost }) {
   const [isCreatePostModalOpen, setIsCreatePostModalOpen] = useState(false);
@@ -37,7 +44,12 @@ function Sidebar({ setCreatePostModalOpen, handleCreatePost }) {
     { id: 4, text: "Explore", icon: <ExploreIcon />, path: "/explore" },
     { id: 5, text: "Reels", icon: <SlideshowIcon />, path: "/blank" },
     { id: 6, text: "Messages", icon: <ChatIcon />, path: "/messages" },
-    { id: 7, text: "Notifications", icon: <FavoriteBorderIcon />, path: "/blank" },
+    {
+      id: 7,
+      text: "Notifications",
+      icon: <FavoriteBorderIcon />,
+      path: "/blank",
+    },
     {
       id: 8,
       text: "Create",
@@ -46,11 +58,11 @@ function Sidebar({ setCreatePostModalOpen, handleCreatePost }) {
     },
     {
       id: 9,
-      text: "ward_abdalrazeq",
+      text: "moath_abdalrazeq",
       icon: <Avatar src={require("../../assets/ward.jpeg")} />,
       path: "/profile",
     },
-  ]
+  ];
 
   return (
     <Drawer variant="permanent">
@@ -73,7 +85,9 @@ function Sidebar({ setCreatePostModalOpen, handleCreatePost }) {
               onClick={item.onClick}
               sx={listItemStyle}
             >
-              <ListItemIcon style={{ color: "white" }}>{item.icon}</ListItemIcon>
+              <ListItemIcon style={{ color: "white" }}>
+                {item.icon}
+              </ListItemIcon>
               <ListItemText style={{ color: "white" }} primary={item.text} />
             </ListItem>
           ))}
@@ -88,7 +102,11 @@ function Sidebar({ setCreatePostModalOpen, handleCreatePost }) {
           </ListItem>
         </div>
       </List>
-      <CreatePostModal open={isCreatePostModalOpen} onClose={closeCreatePostModal} onPost={handleCreatePost} />
+      <CreatePostModal
+        open={isCreatePostModalOpen}
+        onClose={closeCreatePostModal}
+        onPost={handleCreatePost}
+      />
     </Drawer>
   );
 }

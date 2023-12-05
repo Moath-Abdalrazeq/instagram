@@ -25,7 +25,7 @@ export const friendSuggestions = [
   },
   {
     id: 5,
-    name: "ward23",
+    name: "moath23",
     avatar: require("../../../assets/Avatars/wardphoto.jpeg"),
     follow: "New to instagram ",
   },

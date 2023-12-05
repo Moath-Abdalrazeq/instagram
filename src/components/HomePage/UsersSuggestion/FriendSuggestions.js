@@ -19,15 +19,15 @@ function FriendSuggestions() {
         >
           <Avatar
             src={require("../../../assets/ward.jpeg")}
-            alt="ward"
+            alt="moath"
             style={{ marginRight: "10px" }}
           />
           <div>
             <div style={{ display: "flex", alignItems: "center" }}>
-              <Typography variant="body1">ward_abdalrazeq</Typography>
+              <Typography variant="body1">moath_abdalrazeq</Typography>
             </div>
             <Typography variant="body1" color="gray">
-              Ward Abdalrazeq
+              Moath Abdalrazeq
             </Typography>
           </div>
           <div style={{ marginLeft: "auto" }}>
@@ -38,7 +38,6 @@ function FriendSuggestions() {
         </div>
         <div style={{ display: "flex", justifyContent: "space-between" }}>
           <Typography variant="body1" color="gray">
-
             Suggestions for You
           </Typography>
           <Button variant="text" style={{ color: "white" }} size="small">
@@ -68,7 +67,7 @@ function FriendSuggestions() {
         ))}
         {footer.map((footers) => (
           <button
-          key={footers.id}
+            key={footers.id}
             onMouseEnter={(e) => {
               e.target.style.textDecoration = "underline";
             }}
